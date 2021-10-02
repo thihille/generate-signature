@@ -1,0 +1,38 @@
+<form (submit)="onSubmit()">
+  <div>
+    <label for="">
+      <input type="text" name="name" [(ngModel)]="signatureName" placeholder="Digite o Nome" style="border: 1px solid #999; padding: 5px; margin-bottom: 10px; border-radius: 4px;">
+    </label>
+  </div>
+  <div>
+    <label for="">
+      <input type="text" name="mail" [(ngModel)]="signatureMail" placeholder="Digite o E-mail" style="border: 1px solid #999; padding: 5px; margin-bottom: 10px; border-radius: 4px;">
+    </label>
+  </div>
+  <div>
+    <label for="">
+      <input type="text" name="phone" [(ngModel)]="signaturePhone" placeholder="Digite o Telefone" style="border: 1px solid #999; padding: 5px; margin-bottom: 10px; border-radius: 4px;">
+    </label>
+  </div>
+  <div>
+    <button style="border-radius: 8px; background-color: goldenrod; border: none; padding: 10px; color: white; text-transform: uppercase; border-bottom: 4px solid red; text-shadow: 1px 1px 0 black;">Criar assinatura</button>
+  </div>
+</form>
+
+<h1 *ngIf="signatures.length > 0" style="font-family: sans-serif;">Assinaturas</h1>
+<div class="preview">
+
+  <table border="0" cellspacing="0" callpadding="0" width="320" style="width: 320px; margin-bottom: 30px;" *ngFor="let signature of signatures">
+    <tr>
+      <td style="margin-right: 10px; padding-right: 10px; border-right: 1px solid #ccc;">
+        <img src="https://www.mira.com.br/Content/img/logo.jpg" alt="" style="display: block; width: 100px; height: auto;">
+      </td>
+      <td style="padding-left: 10px;">
+        <p style="vertical-align: middle;" style="padding: 0 0 5px 0; margin: 0; font-family: sans-serif; font-size: 12px;">{{ signature.name }}</p>
+        <p style="vertical-align: middle;" style="padding: 0; margin: 0; font-family: sans-serif; font-size: 11px; color: #555555;">[icone] {{ signature.mail }}</p>
+        <p style="vertical-align: middle;" style="padding: 0; margin: 0; font-family: sans-serif; font-size: 11px; color: #555555;">[icone] {{ signature.phone }}</p>
+      </td>
+    </tr>
+  </table>
+
+</div>
