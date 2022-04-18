@@ -1,5 +1,9 @@
 # GenerateSignature
 
+ ```
+ <cmx-assembled-data no-margin></cmx-assembled-data>
+ ```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
 
 ## Development server
