@@ -1,27 +1,29 @@
-# GenerateSignature
+#### Estrutura de Dados Padrão
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
+![Exemplo da Estrutura de Dados Padrão](../../images/frontend/cmx-assembled-data/exemplo.png)
 
-## Development server
+## :bookmark: Sobre
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Cria uma linha de dados padronizada, contendo título e valor, recebendo a quantidade de informações esperadas por linha, calculando dinamicamente seus espaçamentos.
 
-## Code scaffolding
+Tag HTML de inicialização: `<cmx-assembled-data></cmx-assembled-data>`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## :inbox_tray: Parâmetros
 
-## Build
+## Obrigatórios
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- data - Lista de objetos contendo obrigatóriamente os atributos `title` e `value`, e recebendo opcionalmente os atributos `flag` (para bandeiras) e `formatter` (para formatação especial).
 
-## Running unit tests
+## Não Obrigatórios
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- data - Lista de objetos do tipo: contendo atributos não obrigatórios `align` (alinhamento dos atributos `title` e `value`) podendo ser passado os valores: (left, center, right) - (padrão: left)
 
-## Running end-to-end tests
+- maxRowElements - Número que define o máximo de elementos por linha, responsável por determinar a largura de cada elemento. (padrão: 6)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- no-margin - Passa-se este atributo do tipo `single` quando deseja remover as margens de css padrões que já vem setado no componente, ex:
 
-## Further help
+```
+    <cmx-assembled-data no-margin></cmx-assembled-data>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+***
